@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Edit Produk</ion-title>
+    <ion-buttons slot="end">
+      <ion-button routerLink="/home">Back</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content *ngIf="product">
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <ion-item>
+      <ion-label position="stacked">Nama Produk</ion-label>
+      <ion-input type="text" formControlName="this.product_name"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Harga Produk</ion-label>
+      <ion-input type="text" formControlName="this.product_price" ></ion-input>
+    </ion-item>
+    <ion-button type="submit" expand="block">Simpan</ion-button>
+  </form>
+</ion-content>

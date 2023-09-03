@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Create</ion-title>
+    <ion-buttons slot="end">
+      <ion-button routerLink="/home">Back</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-label position="floating">Produk Name</ion-label>
+      <ion-input [(ngModel)]="product_name"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Price</ion-label>
+      <ion-input [(ngModel)]="product_price"></ion-input>
+    </ion-item>
+  </ion-list>
+  <ion-button expand="block" (click)="create()" routerLink="/home">Create</ion-button>
+</ion-content>

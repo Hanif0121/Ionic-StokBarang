@@ -1,0 +1,21 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Produk 
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-item lines="none">
+   <ion-label><b>List Barang</b></ion-label> <br>
+   <ion-button routerLink="/create-produk" size="small">Tambah Barang</ion-button>
+  </ion-item> 
+ 
+   <ion-item *ngFor="let item of data">
+    <ion-label>{{ item.product_name }}</ion-label>
+    <ion-label>{{ item.product_price }}</ion-label>
+    <ion-button color="danger" (click)="delete(item.product_id)">Delete</ion-button>
+    <!-- <ion-button color="primary" (click)="edit(item.product_id)">Edit</ion-button> -->
+  </ion-item>
+</ion-content>
